@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bhoota Gappa — JustUtter Horror Series Part 3. An AI-powered immersive reading experience with live illustrations and narration.">
+  <meta property="og:title" content="Bhoota Gappa — JustUtter Horror Series">
+  <meta property="og:description" content="The Burnt Smell of Fresh Ash. AI-illustrated. Horror-narrated. 8M+ readers.">
+  <meta property="og:type" content="website">
+  <title>Bhoota Gappa — JustUtter Horror Series</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=IM+Fell+English:ital@0;1&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="prog"></div>
+
+  <div id="ftb">
+    <button class="ftb-btn" onclick="doNarrate()">🎙 Narrate</button>
+    <div class="ftb-sep"></div>
+    <button class="ftb-btn" onclick="doIllustrate()">🎨 Illustrate</button>
+    <div class="ftb-sep"></div>
+    <button class="ftb-btn" onclick="doAsk()">👁 Ask AI</button>
+  </div>
+
+  <div id="modal-bg">
+    <div class="modal">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-eyebrow">JustUtter Horror Series</div>
+      <div class="modal-title">Unlock the Darkness</div>
+      <div class="modal-desc">Some horrors cannot be read in fragments. Subscribe to devour the full Bhoota Gappa experience — all chapters, unlimited AI illustrations, and ElevenLabs horror narration.</div>
+      <div class="plan">
+        <div class="plan-name">Free Reader</div>
+        <div class="plan-price">₹0 <span>forever</span></div>
+        <div class="plan-perks">
+          <div class="perk">Introduction chapter only</div>
+          <div class="perk">3 AI illustrations / month</div>
+          <div class="perk">Basic browser narration</div>
+        </div>
+      </div>
+      <div class="plan featured">
+        <div class="plan-tag">Most Popular</div>
+        <div class="plan-name">Full Access</div>
+        <div class="plan-price">₹99 <span>/ month</span></div>
+        <div class="plan-perks">
+          <div class="perk">All chapters — Parts 1, 2 &amp; 3</div>
+          <div class="perk">Unlimited AI illustrations (fal.ai)</div>
+          <div class="perk">ElevenLabs horror narrator voice</div>
+          <div class="perk">AI literary companion</div>
+          <div class="perk">Early access to new volumes</div>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="plan-name">Collector's Archive</div>
+        <div class="plan-price">₹249 <span>/ month</span></div>
+        <div class="plan-perks">
+          <div class="perk">Everything in Full Access</div>
+          <div class="perk">Folklore creature Research Log</div>
+          <div class="perk">Author notes &amp; behind-the-scenes</div>
+          <div class="perk">Download illustrations as art prints</div>
+        </div>
+      </div>
+      <button class="btn-start" onclick="activatePro()">Begin Full Access — ₹99/month</button>
+      <div class="modal-foot">Cancel anytime · Secure payment · Instant access</div>
+    </div>
+  </div>
+
+  <header>
+    <div class="h-logo">
+      <div class="h-eye">☽</div>
+      <div>
+        <div class="h-brand">JustUtter</div>
+        <div class="h-sub">Horror Series</div>
+      </div>
+    </div>
+    <div class="h-right">
+      <div class="badge" id="tierBadge">Free Reader</div>
+      <button class="btn-sub" id="subBtn" onclick="openModal()">Unlock Full Access</button>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <div class="book-panel">
+      <div class="hero">
+        <div class="series-eyebrow">JustUtter Horror Anthology · Part 3</div>
+        <div class="book-title">Bhoota Gappa</div>
+        <div class="book-subtitle">The Burnt Smell of Fresh Ash</div>
+        <div class="meta-chips">
+          <div class="chip hot">Folklore Horror</div>
+          <div class="chip">Dark Thriller</div>
+          <div class="chip hot">8M+ Views</div>
+          <div class="chip">Amazon #1</div>
+          <div class="chip">Werewolf Thriller</div>
+          <div class="chip">Erotic Horror</div>
+        </div>
+      </div>
+
+      <div class="ch-eyebrow">Chapter One</div>
+      <div class="ch-title">Introduction</div>
+
+      <div class="prose" id="prose">
+        <p data-i="0">Some ashes refuse to settle. This is not just a continuation. This is a descent.</p>
+        <p data-i="1">When Bhoota Gappa first emerged in October 2024, it was a whisper from the shadows — a blend of folklore and fiction, of chills and truths. Two books later, the whisper has become a scream echoing across states, languages, and minds. With over 7 back-to-back volumes planned, each step has deepened the wound, and Part 3 is where the horror truly begins to fester.</p>
+        <p data-i="2">I've listened. To every review. Every message. Every pause between your sentences. Some said the stories were too short. Some craved more myth, more fear, more folklore. Some demanded truth — the kind even fire cannot cleanse.</p>
+        <p data-i="3">So here is my answer.</p>
+      </div>
+
+      <div class="lock-zone" id="lockZone">
+        <div class="lock-blur prose" id="lockText">
+          <p data-i="4">"Bhoota Gappa – Part 3: The Burnt Smell of Fresh Ash" is the most intense, most complex, and most haunting chapter yet in the JustUtter horror anthology. This volume pushes past boundaries — geographical and emotional. And it is here that the Bhoota Gappa Research Log comes alive.</p>
+          <p data-i="5">From the shadow-haunting Yapom women of Arunachal Pradesh, to the weretigers of Tripura. From West Bengal's Shakchunni — the ghost bride who wanders in vermilion and anklets — to Nepal's Kichkandi. From Assam's Baak and Puwali Bhoot, to Mizoram's Lasi, the forest-dwelling seductress who trades beauty for souls.</p>
+          <p data-i="6">These stories were not mine alone — they were yours. Locals vouched for them. They insisted: "We have seen them. We have felt them. These are not dead tales." This section drove nearly 8 million views, with voices rising loudest from Arunachal Pradesh.</p>
+        </div>
+        <div class="paywall" id="pwGate">
+          <div style="font-size:26px;opacity:.72">🔥</div>
+          <div class="pw-title">The Horror Continues</div>
+          <div class="pw-body">The creatures, the Research Log, the cursed belly of Shikaar-Nagar — all await beyond this threshold.</div>
+          <button class="btn-gate" onclick="openModal()">Unlock Full Access — ₹99/mo</button>
+          <div class="pw-note">7 volumes · Unlimited AI illustrations · ElevenLabs narration</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ai-panel">
+      <div class="tabs">
+        <button class="tab on" onclick="switchTab('illus',this)">Illustrate</button>
+        <button class="tab"    onclick="switchTab('narr',this)">Narrate</button>
+        <button class="tab"    onclick="switchTab('chat',this)">Ask AI</button>
+      </div>
+      <div class="tab-body">
+
+        <div class="pane on" id="pane-illus">
+          <div class="key-card">
+            <div class="key-card-title">🔑 fal.ai API Key</div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <div class="key-label">
+                <span class="dot" id="falDot"></span>
+                Seedream V4 image generation
+                <span class="key-cost">~₹2.50/img</span>
+              </div>
+              <input class="key-input" type="password" id="falKey"
+                placeholder="fal-xxxxxxxxxxxxxxxx"
+                oninput="setFalKey(this.value)">
+              <div class="key-hint">fal.ai → Dashboard → API Keys. Free trial credits included. $0.03/image.</div>
+            </div>
+          </div>
+          <div class="cost-meter">
+            <div class="cm-row"><span class="cm-label">Images generated</span><span class="cm-val" id="imgCount">0</span></div>
+            <div class="cm-div"></div>
+            <div class="cm-row"><span class="cm-label">Est. cost (USD)</span><span class="cm-val" id="imgCostUSD">$0.000</span></div>
+            <div class="cm-row"><span class="cm-label">Est. cost (INR)</span><span class="cm-val" id="imgCostINR">₹0.00</span></div>
+          </div>
+          <div class="illus-idle" id="illusIdle">
+            <div class="idle-icon">🎨</div>
+            <div class="idle-msg">Click any paragraph<br>to paint its scene</div>
+            <div class="idle-sub">Seedream V4 · Dark folk horror</div>
+          </div>
+          <div class="illus-result" id="illusResult">
+            <div class="img-frame" id="imgFrame">
+              <img id="genImg" alt="AI generated horror scene">
+              <div class="gen-overlay" id="genOverlay">
+                <div class="gen-spinner">🖌</div>
+                <div class="gen-label" id="genLabel">Ready to paint</div>
+                <div class="gen-sub"   id="genSub"></div>
+              </div>
+              <div class="cost-pill" id="costPill" style="display:none"></div>
+            </div>
+            <div class="illus-caption" id="illusCaption"></div>
+            <div class="passage-snip">
+              <div class="snip-label">Selected passage</div>
+              <div class="snip-body" id="snipBody"></div>
+            </div>
+            <button class="regen-btn" onclick="regenIllus()">↺ Regenerate</button>
+          </div>
+          <div class="illus-locked" id="illusLocked">
+            <div style="font-size:24px;opacity:.55">🎨</div>
+            <div class="il-title">3 Free Illustrations Used</div>
+            <div class="il-body">Subscribe for unlimited AI-generated dark art from fal.ai Seedream V4.</div>
+            <button class="btn-gate" style="padding:10px 22px;font-size:8.5px;" onclick="openModal()">Unlock — ₹99/mo</button>
+          </div>
+        </div>
+
+        <div class="pane" id="pane-narr">
+          <div class="key-card">
+            <div class="key-card-title">🔑 ElevenLabs API Key</div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <div class="key-label">
+                <span class="dot" id="elDot"></span>
+                Flash v2.5 · Callum horror voice
+                <span class="key-cost">$5/mo</span>
+              </div>
+              <input class="key-input" type="password" id="elKey"
+                placeholder="sk_xxxxxxxxxxxxxxxxxxxxxxxx"
+                oninput="setElKey(this.value)">
+              <div class="key-hint">Starter $5/mo → 30k credits. Flash v2.5 = 0.5 credits/char (~50 min narration). Falls back to browser TTS.</div>
+            </div>
+          </div>
+          <div class="narr-idle" id="narrIdle">
+            <div class="idle-icon" style="font-size:30px;">🕯</div>
+            <div class="idle-msg">Click any paragraph<br>to hear it narrated</div>
+            <div class="idle-sub">ElevenLabs · Callum · Deep horror</div>
+          </div>
+          <div class="narr-card" id="narrCard">
+            <div class="voice-badge">
+              <div class="vb-name" id="voiceName">🎙 Ready</div>
+              <div class="vb-desc" id="voiceDesc">Select a paragraph to begin</div>
+            </div>
+            <div class="passage-snip">
+              <div class="snip-label">Now reading</div>
+              <div class="snip-body" id="narrSnip"></div>
+            </div>
+            <div class="player">
+              <div class="player-label">Narration player</div>
+              <div class="player-row">
+                <button class="play-btn" id="playBtn" onclick="togglePlay()">▶</button>
+                <div class="waveform" id="waveform"></div>
+                <div class="player-clock" id="clock">0:00</div>
+              </div>
+              <div class="narr-scroll" id="narrScroll"></div>
+              <div class="narr-status" id="narrStatus"></div>
+            </div>
+            <button class="stop-btn" onclick="stopNarration()">■ Stop</button>
+          </div>
+        </div>
+
+        <div class="pane" id="pane-chat">
+          <div class="chat-msgs" id="chatMsgs">
+            <div class="msg">
+              <div class="msg-who">Bhoota Gappa AI</div>
+              <div class="msg-bub">I dwell within these pages. Ask me about the creatures, the folklore, the characters — or the dark truths woven between every line.</div>
+            </div>
+          </div>
+          <div class="chat-foot">
+            <textarea class="chat-input" id="chatInput"
+              placeholder="Ask about Shakchunni, Azagka, the Yapom…"
+              onkeydown="onChatKey(event)"></textarea>
+            <button class="send-btn" onclick="sendChat()">↗</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/fallback.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
